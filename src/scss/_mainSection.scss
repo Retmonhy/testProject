@@ -1,0 +1,16 @@
+.mainSection{
+	.main__header{
+		font-size: 72px;
+		line-height: 85px;
+		color: #fff;
+		@include rubikRegular();
+		.pink-text{
+			color: #E8A2A2;
+		}
+	}
+	.about-cost{
+		@include notoSansRegular();
+		font-size: 24px;
+		
+	}
+}
