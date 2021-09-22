@@ -1,0 +1,129 @@
+.header{
+	z-index: 1;
+	height: 25vh;
+	background-color: darken(gray, 40%);	
+	width: 100vw;
+	&-wrap{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.navbar{		
+		display: flex;
+		width: 645px;
+		align-items: center;
+		justify-content: flex-end;
+		margin: 0;
+		position: relative;
+		padding-right: 30px;
+		&:after{
+			content: '';
+			width: 47%; height: 1px;
+			position: absolute;
+			bottom: 0; left: 6%;
+			background: linear-gradient(to right, #303030, 80%, #8A8A8A);
+		}
+		&:before{
+			content: '';
+			width: 47%; height: 1px;
+			position: absolute;
+			bottom: 0; right: 0%;
+			background: linear-gradient(to left, #303030, 80%, #8A8A8A);
+		}
+	}
+	&__link{
+		margin-left: 60px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 18px;
+		transition: 0.5s;
+		@include notoSansRegular();
+		
+		&:active, &:hover, &:visited{
+			text-decoration: none;
+			color: #fff;
+		}
+		&:hover{ 
+			color: lighten(#E8CCA2, 10%);
+		}
+		&:first-child{ margin: 0;}
+
+	}
+	&__link_active{
+		color: #E8CCA2;
+
+	}
+	&__image_after{
+		display: none;
+	}
+	&__menu
+	{
+		display: none;
+	}
+	
+}
+@media (max-width: 1485px)
+{
+
+}
+@media (max-width: 1199px){
+	.header{
+		height: 15vh;
+	}
+	
+}	
+@media (max-width: 991px){
+	.header{
+		.navbar{
+			display: none;
+		}
+		&__menu
+		{
+		    display: flex;
+		    flex-direction: column;
+
+		    width: 41px;
+		    height: 41px;
+
+		    align-items: center;
+		    justify-content: center;
+		    span
+		    {
+		        width: 22px;
+		        height: 2px;
+		        margin-bottom: 5px;
+
+		        background-color: #fff;
+		        &:last-child
+		        {
+		            margin: 0;
+		        }
+		    }
+		}
+
+	}
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 425px) {
+	.header{
+		&__image_before{
+			display: none;
+		}
+		&__image_after{
+			display: block;
+			text-align: center;
+			.logo{
+				text-align: center;
+			}
+		}
+		&-wrap{
+			justify-content: flex-end;
+		}
+		&__menu{ margin-bottom: 21px;}
+	}
+}

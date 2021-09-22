@@ -1,0 +1,5 @@
+@function aboutMixer__leftOffset($offsetNow, $offsetValue){
+
+	@return $offsetNow - $offsetValue;
+}
+

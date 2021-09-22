@@ -1,0 +1,210 @@
+.aboutMixer-section{
+	background-color: darken(gray, 30%);
+	height: 100vh;
+	position: relative;
+	.aboutBlock-wrap{
+		height: 100%;
+		width: 689px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+	
+		.aboutBlock{
+			.feature-name{
+				display: block;
+				@include rubikBold();
+				font-size: 64px;
+				line-height: 75px;
+				color: #EAEAEA;
+			}
+			.feature-description{
+				@include notoSansRegular();
+				font-size: 22px;
+				line-height: 29px;
+				color: #EAEAEA;
+				width: 689px;
+			}
+		}
+		.aboutBlock__feature{
+			width: 100%;
+			.feature-name{
+				margin-bottom: 20px;
+			}
+			.feature-description{ }
+		}
+	}
+	.ellipses-wrap{
+		position: absolute;
+		top: 0; left: 0;
+		transform: translate($aboutMixer__leftOffset, -12vh);
+		height: 124vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		.ellipseBlock{
+			width: 403px; height: 403px;
+			.image-block{
+					width: 100%; 
+					height: 100%;
+					background: url(../img/aboutMixer/top_ellipse.png) center no-repeat;
+					background-size: cover;
+				}
+		}
+		.arrow{
+			position: absolute;
+			left: 50%;
+			transform: translate(0, -40%);
+		}
+	}
+
+}
+@media (max-width: 1485px){
+	.aboutMixer-section{
+
+		.ellipses-wrap{
+			transform: translate(250px, -12vh);
+			.ellipseBlock{
+				width: 363px; height: 363px;
+				
+			}
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.aboutMixer-section{
+
+		.ellipses-wrap{
+			transform: translate(150px, -12vh);
+			.ellipseBlock{
+				width: 340px; height: 340px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.aboutMixer-section{
+		.aboutBlock-wrap{
+
+			.aboutBlock{
+				max-width: 550px;
+				.feature-name{
+					font-size: 55px;
+				}
+			}
+		}
+		.ellipses-wrap{
+
+			transform: translate(70px, -12vh);
+			.ellipseBlock{
+				width: 330px; height: 330px;
+
+			}
+		}
+	}
+		
+}
+
+@media (max-width: 767px) {
+	.aboutMixer-section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.aboutBlock-wrap{
+			text-align: center;
+			width: 500px;
+			.aboutBlock{
+				.feature-name{
+					font-size: 50px;
+				}
+				.feature-description{
+					font-size: 18px;
+				}
+			}
+		}
+		.ellipses-wrap{
+			left: 50%;
+			transform: translate(-50%, -5.0vh);
+			.ellipseBlock{
+				width: 270px; height: 270px;
+				.image-block{
+					width: 100%; 
+					height: 100%;
+					background: url(../img/aboutMixer/top_ellipse.png) center no-repeat;
+					background-size: cover;
+				}
+				
+			}
+		}
+	}
+}
+
+@media (max-width:  565px) {
+	.aboutMixer-section{
+		padding: 0 50px 0 50px ;
+		.aboutBlock-wrap{
+			justify-content: space-around;
+			width: 270px;
+			.aboutBlock{
+				.feature-name{
+					font-size: 36px;
+					margin-bottom: 0;
+				}
+				.feature-description{
+					font-size: 14px;
+				}
+			}
+		}
+		.ellipses-wrap{
+			justify-content: space-around !important;
+			height: 100vh;
+			transform: translate(-50%, 0);
+			.ellipseBlock{ 
+				width: 200px; height: 200px;
+				.arrow{
+					// transform: scale(0.4) tranlsate(0, -100%);
+				}
+			}	
+		} 
+	}
+}
+// @media (min-width: 375px) and (max-width: 554px) {
+// 	.aboutMixer-section{
+// 		padding: 0 50px 0 50px ;
+// 		.aboutBlock-wrap{
+// 			justify-content: space-around;
+// 			width: 270px;
+// 			.aboutBlock{position: relative;
+// 				// &:before{
+// 				// 	position: absolute;
+// 				// 	content:"";
+// 				// 	width: 233px; height: 233px;
+
+// 				// 	background: url(../img/aboutMixer/Arrow.svg) 50% 100% no-repeat,url(../img/aboutMixer/bottom_ellipse.png) center no-repeat;
+// 				// 	background-size: contain;
+// 				// 	top: -10px; left: 18px;
+// 				// }
+
+// 				.feature-name{
+// 					font-size: 36px;
+// 				}
+// 				.feature-description{
+// 					font-size: 14px;
+// 				}
+// 			}
+// 		}
+// 		.ellipses-wrap{
+// 			justify-content: space-around !important;
+// 			height: 100vh;
+// 			transform: translate(-50%, 0);
+// 			.ellipseBlock{ 
+// 			width: 300px;
+// 			.ellipse-img{ width: 300px;}
+// 			}	
+// 		} 
+// 	}
+// }
+

@@ -1,0 +1,18 @@
+body{
+	max-width: 1900px;
+	padding: 0;
+	margin: 0;
+	height: 400vh;
+	// background: #000 url(../img/bacgground_body.jpg) 0 0 no-repeat;
+	// background-size: contain;
+	// background: linear-gradient(to bottom)
+}
+/* рабочая штука для анимции */
+.main{
+	position: relative;
+	#animation-div{
+		width: 25vw;	height: 400vh;
+		position: fixed;
+		top: -150vh; right: 5vw;
+	}
+}
